@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:54025",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Ethan\\Desktop\\Hackathon\\Hackathon\\Hackathon.Server\\..\\hackathon.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}
