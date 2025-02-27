@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/google-chrome-third-party-cookie-phaseout-62015",
+    "title": "Google Chrome third-party cookie phaseout",
+    "pub_date": "2024-05-02",
+    "replies": "0 replies",
+    "views": "40 views",
+    "author": "magda_leroux",
+    "content": "Google Chrome third-party cookie phaseout\nKB003710\nPRODUCT\nNintex K2 Cloud, Nintex Automation\nBASED ON\nNintex K2 Cloud, Nintex Automation\u00a0\n\u00a0\nGoogle is rolling out changes to block third-party cookies in the Google Chrome browser. This affects Nintex K2 for SharePoint and Nintex Automation for SharePoint which loads Nintex K2 forms in an iframe. Due to the SharePoint and Nintex K2 sites being on different domains, if blocking of third-party cookies is enabled this results in login failures due to authentication cookies that cannot be set by the browser.\nSee \nPrepare for the third-party cookie phaseout\n for more information about timelines.\n\u00a0\nIssue\nAuthentication or redirect errors when navigating to SharePoint Online or SharePoint On Premise forms or webparts.\n\u00a0\nResolution\nSee the following topics in the latest help documentation for information about resolving these issues:\nNintex Automation: \nGoogle Chrome third-party cookie phaseout\n \nK2 Cloud: \nGoogle Chrome third-party cookie phaseout"
+}

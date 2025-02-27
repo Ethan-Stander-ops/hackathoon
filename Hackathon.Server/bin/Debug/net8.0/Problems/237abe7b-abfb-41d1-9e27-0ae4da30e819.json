@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/error-converting-data-type-nvarchar-to-datetime-when-upgrading-to-5-7-72518",
+    "title": "Error converting data type nvarchar to datetime when upgrading to 5.7",
+    "pub_date": "2024-10-18",
+    "replies": "0 replies",
+    "views": "37 views",
+    "author": "AFO",
+    "content": "Topic\nSymptoms\nWhen upgrading from 5.6 to 5.7, there were errors logged during the execution of the script: webhooksScheduler.inject.sql\n\u00a0\nScript execute failed: System.\nException\n: Script execution \nexception\n: System.Data.SqlClient.SqlException (\n0x80131904\n): Error converting data type nvarchar to datetime.\nDiagnosis:\n\u2022 Execution of the script individually shows the error:\nMsg:\n8114\n, Level \n16\n, State \n5\n, Procedure Eventbus.aUpdateSchedule, Line \n0\n\nError converting data \ntype\n nvarchar to datetime\nResolution\nLabs has provided a new inject script for the error \"Error converting data type nvarchar to datetime\".\nPlease download it and follow the steps below:\n1.Go to the location for the extracted K2 5.7 installer below:\n[Extracted Loc]\\Nintex Automation (5.7) (5.0008.1000.0)\\Installation\\Apps\\K2 blackpearl Server.zip\\Data\\SourceCode.Data.EventbusScheduler\\SourceCode.Data.EventbusScheduler\\Schema Objects\\Schemas\\EventBus\\Scripts\n2.Copy the script into the area and choose to copy and replace the current script.\n3.Copy and replace the script from the drop location in step 2 if the WebhooksScheduler.inject.sql script exists in the below location:\n[Install Loc]\\K2\\Setup\\Apps\\K2 blackpearl Server.zip\\Data\\SourceCode.Data.EventbusScheduler\\SourceCode.Data.EventbusScheduler\\Schema Objects\\Schemas\\EventBus\\Scripts\n4.Rerun the installer with configure from the extracted location."
+}

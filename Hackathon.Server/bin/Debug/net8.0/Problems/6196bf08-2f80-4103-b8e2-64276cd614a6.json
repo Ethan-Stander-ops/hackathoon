@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/unable-to-view-service-instances-security-after-modifying-permissions-62399",
+    "title": "Unable to view Service Instances Security after modifying permissions",
+    "pub_date": "2024-07-02",
+    "replies": "0 replies",
+    "views": "32 views",
+    "author": "boringnerd",
+    "content": "Topic\nOn K2 Management, after going to the Service Instances Security page and setting Deny for \nEveryone\n, the permission settings no longer load for that page.\n\u00a0\n\u00a0\nInstructions\n\u00a0\nThe \nEveryone\n\u00a0role is a special role used to represent ALL users in the environment. The Deny permission takes precedence over all permissions, so by setting Deny for the \nEveryone\n\u00a0role, you are denying ALL users from accessing and modifying Service Instances Security.\n \nIf you cannot view and modify the permissions after setting Deny permissions for the Everyone\u00a0role, please log a support case with Nintex Support to request\u00a0assistance resetting the permissions.\n \nBy default, the 'Everyone' role has permission to this page. If you want to prevent everyone from accessing it, you can grant specific admin users permission to access this page and remove the \nEveryone\n\u00a0role."
+}

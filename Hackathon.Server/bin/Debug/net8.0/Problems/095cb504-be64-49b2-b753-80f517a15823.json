@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/state-not-found-error-on-event-viewer-log-72662",
+    "title": "State Not Found error on Event Viewer Log",
+    "pub_date": "2024-12-06",
+    "replies": "0 replies",
+    "views": "11 views",
+    "author": "annao",
+    "content": "Topic\nThe following error message was found on the Application Event Viewer logs of the K2 Server:\n2025 Error Marshalling SourceCode.Forms.Runtime.ClientServer.GetFormAx, State '{ImageFile}' not found\n\u00a0 \u00a0at SourceCode.Forms.Runtime.Form.Save(ArchiveX ax, String stateName)\n\u00a0 \u00a0at SourceCode.Forms.Runtime.GetFormAx(String culture, Guid guid, String name, Int32 version, String stateName, Boolean loadViews)\n\u00a0 \u00a0at SourceCode.Forms.Runtime.ClientServer.GetFormAx(String culture, String name, Int32 version, String state, Boolean loadViews)\nInstructions\u00a0\nThis error gets logged whenever a user opens a task URL with an invalid state parameter specified.\ne.g. https://nintex.k2test.net/Runtime/Runtime/Form/SubmitClaim/?SerialNo=8_19&\n_state=K2Logo70.png\n&ClaimID=7\nPlease ensure that the Task URL is correctly built when designing your workflows. This way, users will not open a URL that contains an invalid state parameter."
+}

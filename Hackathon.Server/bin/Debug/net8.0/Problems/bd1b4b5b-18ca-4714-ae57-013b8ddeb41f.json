@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/error-encountered-when-running-the-stored-procedure-utility-maintain-indexdefrag-72420",
+    "title": "Error encountered when running the stored procedure Utility.Maintain_IndexDefrag",
+    "pub_date": "2024-09-18",
+    "replies": "0 replies",
+    "views": "15 views",
+    "author": "KateV",
+    "content": "Topic\n\u00a0\nThe below error is encountered when running the stored procedure\u00a0Utility.Maintain_IndexDefrag\nScanning indexes...\nMsg 2628, Level 16, State 1, Procedure Utility.Maintain_IndexDefrag, Line 204 [Batch Start Line 2]\nString or binary data would be truncated in table 'tempdb.dbo.#A3BBDC65', column 'index_fqn'. Truncated value: '[UX_Relationship_Relationships_DependentClassId_DependentName_DependentVersion_DependencyClassId_Dep'.\nThe statement has been terminated.\nEnumerating indexes...\nOperation complete\n(1 row affected)\n\u00a0\n\u00a0\nInstructions\u00a0\nThe error message is caused by a table that has a very long index name. The table and index in the above sample screenshot was still in K2 5.3 but has been removed in later versions.\nNote:\u00a0Before proceeding with the below, kindly ensure that you have created a backup of the [Utility].[Maintain_IndexDefrag] stored procedure.\nOne way to get around this is to Edit the stored procedure and replace all the sysname types to nvarchar(300).\nJust remember to revert back the changes made on the stored procedure after you are done with the defragmentation as it can cause issues with installer in future if the name is not restored.\nKindly test this on your non-production environment first."
+}

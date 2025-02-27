@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/unauthorised-smartobject-access-error-on-ha-nlb-environment-72233",
+    "title": "Unauthorised SmartObject access error on HA/NLB environment",
+    "pub_date": "2024-08-02",
+    "replies": "0 replies",
+    "views": "25 views",
+    "author": "boringnerd",
+    "content": "Topic\nWhen executing a SmartObject in a form, or opening K2 Management, the following error shows up.\u00a0\n\"Unauthorised SmartObject access\"\n\u00a0\n\u00a0\nThis seems to only happen on environments with HA or NLB setup for web servers that are hosting K2 SmartForms. Executing the same SmartObject that throws the error directly on the K2 server with the same user, using SmartObject Service Tester tool works perfectly with no error.\n\u00a0\nInstructions\u00a0\nCheck the following web.config on all web servers hosting K2 SmartForms in your environment:\n{K2 Installation Folder}\\K2 smartforms Runtime\\web.config\n{K2 Installation Folder}\\K2 smartforms Designer\\web.config\nSearch for \"<machineKey\", and make sure the decryptionKey and validationKey are the same across all your web servers. If the decryptionKey and validationKey do not match, run the following on your K2 database to retrieve the correct decryptionKey and validationKey:\n\u00a0\nSELECT * FROM [HostServer].[Configuration]WHERE [VariableToken] = '[DECRYPTION_KEY]' OR [VariableToken] = '[VALIDATION_KEY]'\nAnd update the web.config that does not contain the same decryption and validation keys. Do this for all your web servers.\nAfter updating the web.config, perform IISRESET on the affected web server for the changes to take effect."
+}

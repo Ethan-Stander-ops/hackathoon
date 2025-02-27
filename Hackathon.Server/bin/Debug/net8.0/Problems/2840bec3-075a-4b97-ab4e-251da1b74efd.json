@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/html-email-formatting-removed-in-workflow-after-upgrading-to-5-8-72815",
+    "title": "HTML email formatting removed in workflow after upgrading to 5.8",
+    "pub_date": "2025-02-10",
+    "replies": "0 replies",
+    "views": "20 views",
+    "author": "boringnerd",
+    "content": "Topic\nBefore upgrading to 5.8, the HTML formatting for email messages in workflows are correct. However after the upgrade, the HTML formatting for the emails in the same workflows are gone.\nInstructions\u00a0\n1. Edit the workflow in Chrome or Edge and\u00a0press F12 to open developer tools.\n2. Inspect the HTML body.\n3. Locate and select the following element: class=\"k2-text-editor code multi-line ng-star-inserted\".\n4. Change the \"white-space\" attribute in the style section to the following: white-space: break-spaces;\n5. Uncheck the \"display: inline-block\" attribute directly below\n\u00a0\nYou should be able to see the HTML render as before and make the necessary changes. It is advised that you reformat the HTML and save the changes as reloading the workflow would then honor the new format without the need for this workaround again."
+}

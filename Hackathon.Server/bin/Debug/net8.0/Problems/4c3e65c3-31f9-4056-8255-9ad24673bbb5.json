@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/net-6-end-of-support-72356",
+    "title": ".NET 6 End of Support",
+    "pub_date": "2024-09-02",
+    "replies": "0 replies",
+    "views": "90 views",
+    "author": "boringnerd",
+    "content": "Topic\nAs per the \ncompatibility matrix\n, currently\u00a0Nintex K2 Five (5.6) and\u00a0Nintex Automation (5.7) are the only two versions that support .NET 6.0.\nAccording to \nMicrosoft\n, official support for .NET 6 is ending on November 12, 2024.\nInstructions\u00a0\nAt the time this KB is written,\u00a0Nintex Automation (5.8) is the only version that supports .NET 8. If you have a requirement to update .NET 6 to .NET 8, please consider upgrading your K2 environment to 5.8 as it is currently the only version that supports .NET 8.\nWhen in doubt. please refer to our compatibility matrix (\nhttps://help.nintex.com/en-US/platform/K2Support/ProductCompatibilityMatrix.htm#.NET_Core\n) on the latest product compatibility. Any updates to .NET 8 compatibility will be reflected in the compatibility matrix."
+}

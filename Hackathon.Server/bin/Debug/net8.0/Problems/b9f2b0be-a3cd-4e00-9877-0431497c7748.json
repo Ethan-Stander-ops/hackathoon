@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/smartaction-replies-with-a-signature-are-not-processed-72153",
+    "title": "Smartaction replies with a signature are not processed",
+    "pub_date": "2024-07-16",
+    "replies": "0 replies",
+    "views": "16 views",
+    "author": "annao",
+    "content": "Topic\nSmartaction replies with an Outlook signature get deleted from the Inbox, but the corresponding workflow instances do not move to the next step.\u00a0If the Outlook signature is removed from the reply before it is sent, the reply is processed successfully, and the workflow instance can proceed to the next step.\n\u00a0\nInstructions\n\u00a0\nPlease check that there are no rules on Exchange that could be deleting emails due to certain keywords that may be included in the Outlook signature.\nYou may follow the steps below for a quick way to test this:\nStop the K2 server service.\n \nSend a Smartactions reply with an Outlook signature.\u00a0You may use wrong/fake serial numbers, as K2 should still receive the email but fail to open the worklist item, which is fine for this test.\n \nAfter sending the email, wait 2-3 minutes, then check the Smartaction account's inbox to see if it\u00a0is\u00a0still there or is now in the Deleted folder.\nIf you see the reply in the Deleted folder even while the K2 server service is not running, then this confirms that there is a rule for deleting the email before the K2 server can process it."
+}

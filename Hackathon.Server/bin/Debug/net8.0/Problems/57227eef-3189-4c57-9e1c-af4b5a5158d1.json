@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/pdf-conversion-failing-61204",
+    "title": "PDF Conversion Failing",
+    "pub_date": "2024-03-13",
+    "replies": "0 replies",
+    "views": "70 views",
+    "author": "annao",
+    "content": "Topic\nSave As PDF fails on runtime with the following error message:\nFailed to convert to PDF. CorrelationId: {CorrelationIdValue}\nThe PDF Log located in \n{K2 Installation Folder}\\K2 PDF Converter\\Logs\\\n shows the following detailed error message:\nCefBrowser LoadPage failed with exception Exception { TargetSite: Void Throw(), Message: \"Load_Error (-9) - ERR_UNEXPECTED\", Data: [], InnerException: null, HelpLink: null, Source: \"System.Private.CoreLib\", HResult: -2146233088, StackTrace: \" at SourceCode.PdfConverter.Api.Converter.CefPdfConverter.LoadPage(ChromiumWebBrowser browser, Action`3 loadAction, String urlOrHtml, String baseUrl)\" }\nInstructions\u00a0\nDisable proxy on the server where the K2 PDF Converter Service is running:\nOpen \nControl Panel > Internet Options\n.\n \nGo to the \nConnections\n tab.\n \nClick \nLAN settings\n.\n \nUncheck \nUse a proxy server for your LAN (These settings will not apply to dial-up or VPN connections)\n, if applicable.\n \nClick \nOK\n to save the change"
+}
