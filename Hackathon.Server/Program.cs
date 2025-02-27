@@ -23,6 +23,18 @@ namespace Hackathon.Server
             var knowledgeArticles = new List<KnowledgeArticle>();
             var problemsFolderPath = Path.Combine(Environment.CurrentDirectory, "Problems");
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policyBuilder =>
+                {
+                    policyBuilder
+                        .AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader();
+                });
+            });
+
+
             // Make sure the folder exists and contains .json files
             if (Directory.Exists(problemsFolderPath))
             {
@@ -57,7 +69,9 @@ namespace Hackathon.Server
 
             var app = builder.Build();
 
-            
+            app.UseCors("AllowAll");
+
+
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
