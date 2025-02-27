@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/unable-to-upgrade-cannot-click-on-next-button-on-setup-manager-72467",
+    "title": "Unable to upgrade. Cannot click on Next button on Setup Manager",
+    "pub_date": "2024-10-02",
+    "replies": "0 replies",
+    "views": "24 views",
+    "author": "boringnerd",
+    "content": "Topic\nAttempting to perform an upgrade, but the Next button on Setup Manager is not responding to clicks. All prerequisites have been met and no warnings or errors are shown on Setup Manager.\n\u00a0\n\u00a0\nInstructions\u00a0\nReproduce the issue, keep the Setup Manager opened, go to '%TEMP%\\K2 Setup Log' in Windows Explorer and check the most recent InstallerTrace logs.\nIf you see the following error in the logs, that means Setup Manager is not able to connect to the K2 database with the user 'sqluser'.\nLogged Error: Could not connect to SQL server. Exception: Login failed for user 'sqluser'.\nThe connection string Setup Manage used to connect to the K2 database can be found in\u00a0[Program Files]\\K2\\Setup\\Configuration.config. You can open Configuration.config with notepad to check if the username and password in the connection string is correct. If the username and password is wrong, update it manually, save the changes, close Setup Manager and launch the installer again.\nNote: The connection string in Configuration.config is encrypted in newer versions of K2. If you need help decrypting the connection string, please log a support case with Nintex Support."
+}

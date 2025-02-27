@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/task-notification-mail-only-follows-the-new-version-of-the-workflow-72707",
+    "title": "Task notification mail only follows the new version of the workflow",
+    "pub_date": "2024-12-19",
+    "replies": "0 replies",
+    "views": "42 views",
+    "author": "KateV",
+    "content": "Topic\nTask notification mail from the task step has been modified and deployed to version 2. The change made was to update the subject/body of the task step to a new version (Example: Subject: Task Version 2).\nThe customer has decided to configure back the workflow to use the version 1 as a default version from the K2 Management page.\nWhen an instance was created, they were able to receive the version 2 details (Example: Subject: Task Version 2) instead of the expected version 1 (Example: Subject: Task Version 1) from the task notification mail.\nInstructions\u00a0\nIMPORTANT:\n This behavior is not a bug and is by design.\u00a0\nThe behavior of the Task notification configuration is that it works on the Eventbus which has an entry per process and there are no versioning on these tables. This means that when the workflow is deployed, any client event notification message is handled by the Eventbus server and not the workflow server. The configuration is updated for each activity per process and only one entry exists in these tables containing the email configuration of the latest deployed process. In these tables, one entry is being generated for each notification message setup. When deploying the workflow, the entry will be updated."
+}

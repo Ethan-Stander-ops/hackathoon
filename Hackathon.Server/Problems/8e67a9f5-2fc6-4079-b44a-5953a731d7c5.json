@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/could-not-load-file-or-assembly-sourcecode-forms-controls-web-controlpack-worklist-61144",
+    "title": "Could not load file or assembly 'SourceCode.Forms.Controls.Web.ControlPack.Worklist'",
+    "pub_date": "2024-03-01",
+    "replies": "0 replies",
+    "views": "84 views",
+    "author": "boringnerd",
+    "content": "Topic\nWorkspace cannot be loaded. The following error message is shown:\n\"Could not load file or assembly 'SourceCode.Forms.Controls.Web.ControlPack.Worklist' or one of its dependencies. The system cannot find the file speciifed.\"\n\u00a0\n\u00a0\nInstructions\u00a0\nMake sure 'SourceCode.Forms.Controls.Web.ControlPack.Worklist.dll' is present in [Program Files]\\K2\\Bin\\ControlPack Controls.\nOn K2 server, go to [Program Files]\\K2\\Setup, open command prompt or Powershell with admin privileges, run the following:\ncontrolutil.exe REGISTER -ASSEMBLY:\"C:\\Program Files\\K2\\Bin\\ControlPack Controls\\SourceCode.Forms.Controls.Web.ControlPack.Worklist.dll\"\nMake sure no errors are reported. After that restart K2 service and perform IISRESET."
+}

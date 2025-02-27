@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/logged-error-target-failed-to-execute-createperformancecounter-servercat-72242",
+    "title": "Logged Error: Target failed to execute: CreatePerformanceCounter_ServerCat",
+    "pub_date": "2024-08-05",
+    "replies": "0 replies",
+    "views": "9 views",
+    "author": "KateV",
+    "content": "Topic\nLogged Error \"Target failed to execute: CreatePerformanceCounter_ServerCat\" found in the installertrace log after upgrading to a higher version of K2.\nInstructions\u00a0\nThe above error indicates an attempt to create performance counters for the K2 Server, which initially appears to proceed correctly by adding 24 counters. However, it ultimately fails due to a file already existing, resulting in a System.IO.IOException. This error is caused by having more than 65535 temporary files in the %TEMP% folder. This is not a bug with Nintex Automation On Prem, and can be resolved by simply clearing out the old temp files. This will be updated in the official documents in the future."
+}

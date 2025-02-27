@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/missing-the-k2-ribbon-on-all-sharepoint-online-lists-libraries-72808",
+    "title": "Missing the K2 ribbon on all SharePoint Online lists/libraries",
+    "pub_date": "2025-02-06",
+    "replies": "0 replies",
+    "views": "18 views",
+    "author": "NikR",
+    "content": "Topic\nEven though site activation was completed without error, the K2 application menu is still missing:\n\u00a0\nInstructions\u00a0\nIf the K2 server was a clean install of 5.7 (i.e., a new database/environment, not an upgrade from a previous version), the Webhooks and SPOnlineModernForms feature flags in the Hostserver.Features table will be enabled.\nThe intention is that the 5.7 clean installs will force spfx / new online features.\nUpgrades will still work with legacy until the migration tool is executed.\nIt is supported to switch over the two flags mentioned above to False (not-enabled) by running the below script, which will give the same behavior as if the environment was an upgrade install.\nUPDATE [K2].[HostServer].[Feature]\nSET IsActive = 0\nWHERE FeatureName IN ('SPOnlineModernForms', 'Webhooks');\nYou\u00a0can then install the legacy K2 app, run Registration Wizard, and activate sites to resolve the issue. (Assuming you have\u00a0an existing SharePoint tenant as legacy add-ins are already disabled for new SharePoint tenants by Microsoft.)\n\u00a0\nAdditional Information\nhttps://help.nintex.com/en-US/nintexautomation/userguide/5.7/Content/K2-for-SharePoint/Add-Steps.htm?tocpath=K2%20for%20SharePoint%7CAdminister%7CAdding%20the%20App%7C_____0"
+}

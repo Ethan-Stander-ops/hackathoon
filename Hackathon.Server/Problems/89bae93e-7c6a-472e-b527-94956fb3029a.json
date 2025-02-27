@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/inconsistent-behavior-with-the-appointment-smartobject-from-the-exchange-online-service-62179",
+    "title": "Inconsistent Behavior with the Appointment SmartObject from the Exchange Online Service",
+    "pub_date": "2024-06-05",
+    "replies": "0 replies",
+    "views": "8 views",
+    "author": "annao",
+    "content": "Topic\nWhen executing the \"List Suggested\" method from a runtime form, the following error is returned:\nStart Date and End Date are required. End Date must be greater than Start Date and must be greater than or equal to a 24 hours period that starts and ends at 12AM.\nThe same method, when called directly from either K2 Management or the SmartObject Service Tester tool, works fine.\n\u00a0\nInstructions\u00a0\n\u00a0\nWhen supplying datetime values for the Start Date and End Date properties, cancel the Time option like in the image below:\nAlthough the user will not be explicitly setting the time, the control will set the time automatically before sending the request to Exchange to compensate for the time zone.\nThis error is due to a limitation from the \nMicrosoft EWS API\n which the SmartObject uses:\u00a0\nThe GetUserAvailability(IEnumerable<AttendeeInfo>, TimeWindow, AvailabilityData) method supports only time periods that are a minimum of 24 hours long and that begin and end at 12:00a.m. To restrict the results of the method to a shorter time period, you must filter the results on the client."
+}

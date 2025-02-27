@@ -1,0 +1,9 @@
+{
+    "url": "https://community.nintex.com/nintex-automation-k2-57/error-accessing-apis-node-on-k2-management-after-applying-k2-five-5-3-june-2023-cumulative-update-72466",
+    "title": "Error accessing APIs node on K2 Management after applying K2 Five (5.3) June 2023 Cumulative Update",
+    "pub_date": "2024-10-02",
+    "replies": "0 replies",
+    "views": "6 views",
+    "author": "boringnerd",
+    "content": "Topic\nWhen trying to access either 'SmartObject OData' or 'Workflow REST' node on K2 Management, the following error message is shown:\nThe type initializer for 'SourceCode.SmartObjects.Services.WebApiSettings.WebApiSettingsJsonSerializerEndpointFormatter' threw an exception.\n\u00a0\n\u00a0\nInstructions\u00a0\n1. Log a tier escalation to request for correct SourceCode.SmartObjects.Services.WebApiSettings.dll.\n2. Stop the K2 Server service.\n3. Backup file in location specified below\n4. Replace assembly in location specified below\nFile Name:\nSourceCode.SmartObjects.Services.WebApiSettings.dll\nFile Paths:\n[Program Files]\\K2\\ServiceBroker\\\n\u00a0\n5. Start the K2 Server service."
+}
